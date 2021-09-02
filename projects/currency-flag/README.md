@@ -49,7 +49,3 @@ selectedCurrency =
 ```
 
 > selectedVal($event) is a function which you can use it in ts file.
-
-> Demo
-
-/src/assets/images/currency.png
