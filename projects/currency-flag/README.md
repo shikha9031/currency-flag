@@ -14,7 +14,7 @@ npm i currency-flag
 > Note: Add CurrencyFlagModule to your list of module imports:
 
 ```
-        {
+
             import { CurrencyFlagModule } from 'currency-flag';
             @NgModule({
             declarations: [AppComponent],
@@ -22,7 +22,7 @@ npm i currency-flag
             bootstrap: [AppComponent]
             })
             class AppModule {}
-        }
+
 ```
 
 ## You can then use this library in your templates:
