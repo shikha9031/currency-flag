@@ -15,7 +15,7 @@ npm i currency-flag
 
 ```
         {
-            import { CurrencyFlagModule } from 'ng-click-outside';
+            import { CurrencyFlagModule } from 'currency-flag';
             @NgModule({
             declarations: [AppComponent],
             imports: [BrowserModule, CurrencyFlagModule],
@@ -49,3 +49,6 @@ selectedCurrency =
 ```
 
 > selectedVal($event) is a function which you can use it in ts file.
+
+> Demo
+> /assets/currency.PNG
