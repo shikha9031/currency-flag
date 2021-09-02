@@ -51,4 +51,5 @@ selectedCurrency =
 > selectedVal($event) is a function which you can use it in ts file.
 
 > Demo
-> /assets/currency.PNG
+
+/assets/images/currency.png
