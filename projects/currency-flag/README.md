@@ -49,3 +49,5 @@ selectedCurrency =
 ```
 
 > selectedVal($event) is a function which you can use it in ts file.
+
+> ![CurrencyFlag Demo](https://raw.githubusercontent.com/shikha9031/currency-flag/master/src/assets/images/currency.png)
