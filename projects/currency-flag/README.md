@@ -52,4 +52,4 @@ selectedCurrency =
 
 > Demo
 
-../src/assets/images/currency.png
+/assets/images/currency.png
