@@ -6,12 +6,13 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
 
 ```
 npm i currency-flag
-
 ```
 
 ## Usage
 
-> App.module.ts file
+```
+App.module.ts file
+```
 
 ```
 
@@ -24,9 +25,9 @@ npm i currency-flag
             class AppModule {}
 
 ```
-
-> HTML file
-
+```
+ HTML file
+```
 ```
 <lib-currency-flag 
 [selectedCurrency]="selectedCurrency"
@@ -35,9 +36,9 @@ npm i currency-flag
 </lib-currency-flag>
 
 ```
-
-> TS file
-
+```
+TS file
+```
 ```
 selectedCurrency =
 {
@@ -51,9 +52,9 @@ selectedCurrency =
     "CurrencySymbol": "₹"
 };
 ```
-
-> Note: selectedVal($event) is a function which you can use it in ts file.
-
+```
+ Note: selectedVal($event) is a function which you can use it in ts file.
+```
 | Input                 | Values        | 
 | -------------         |:-------------:| 
 | showCurrencyAndFlag   | boolean value (true/ false) | 
