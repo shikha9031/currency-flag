@@ -59,4 +59,6 @@ selectedCurrency =
 | showCurrencyAndFlag   | boolean value (true/ false) | 
 | showFlagAndCountry    | boolean value (true/ false)      |  
 
-> ![CurrencyFlag Demo](https://raw.githubusercontent.com/shikha9031/currency-flag/master/src/assets/images/currency.png)
+
+## Preview
+![CurrencyFlag Demo](https://raw.githubusercontent.com/shikha9031/currency-flag/master/src/assets/images/currency.png)
