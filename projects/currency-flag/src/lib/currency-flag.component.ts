@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import * as data from '../json/newCurrencyJson.json';
 
 @Component({
@@ -6,10 +6,14 @@ import * as data from '../json/newCurrencyJson.json';
   templateUrl: './currency-flag.component.html',
   styleUrls: ['./currency-flag.component.scss']
 })
-export class CurrencyFlagComponent implements OnInit {
+export class CurrencyFlagComponent implements OnInit , OnChanges{
   
   @Input() selectedCurrency:any;
   @Output() currency  = new EventEmitter<any>();
+  @Input() showCurrencyAndFlag = false;
+  @Input() showFlagAndCountry = false;
+  searchItem = 'currency';
+
   currencyArray = [
     {
       "countryCode": "",
@@ -28,6 +32,11 @@ export class CurrencyFlagComponent implements OnInit {
 
   ngOnInit(): void {
     this.currencyArray = data.response;
+  }
+  ngOnChanges(change: SimpleChanges){
+    if(this.showFlagAndCountry){
+        this.searchItem = "country";
+    }
   }
   selectedConCurrency(list:any){
     this.selectedCurrency = list;

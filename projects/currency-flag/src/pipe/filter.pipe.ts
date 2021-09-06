@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(items: any[], searchText: string): any[] {
+  transform(items: any[], searchText: string, searchItem:string): any[] {
 
     // return empty array if array is falsy
     if (!items) { return []; }
@@ -18,10 +18,18 @@ export class FilterPipe implements PipeTransform {
 
     // retrun the filtered array
     return items.filter(item => {
-      if (item && item['currencyCode'] && item['Currency'] && item['countryName']) {
-        return (
-         item['currencyCode'].toLowerCase().includes(searchText) ||
-         item['Currency'].toLowerCase().includes(searchText) );
+      if(searchItem === 'currency'){
+        if (item && item['currencyCode'] && item['Currency']) {
+          return (
+           item['currencyCode'].toLowerCase().includes(searchText) ||
+           item['Currency'].toLowerCase().includes(searchText) );
+        }
+      }
+      else if(searchItem === 'country'){
+        if (item['countryName']) {
+          return (
+           item['countryName'].toLowerCase().includes(searchText))
+        }
       }
       return false;
     });

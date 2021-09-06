@@ -25,10 +25,14 @@ npm i currency-flag
 
 ```
 
-## You can then use this library in your templates:
+## You can then use this library in your application:
 
 ```
-<lib-currency-flag [selectedCurrency]="selectedCurrency" (currency)="selectedVal($event)"></lib-currency-flag>
+<lib-currency-flag 
+[selectedCurrency]="selectedCurrency"
+(currency)="selectedVal($event)"
+[showCurrencyAndFlag]="true">
+</lib-currency-flag>
 
 ```
 
@@ -49,5 +53,10 @@ selectedCurrency =
 ```
 
 > selectedVal($event) is a function which you can use it in ts file.
+
+| Input                 | Values        | 
+| -------------         |:-------------:| 
+| showCurrencyAndFlag   | boolean value (true/ false) | 
+| showFlagAndCountry    | boolean value (true/ false)      |  
 
 > ![CurrencyFlag Demo](https://raw.githubusercontent.com/shikha9031/currency-flag/master/src/assets/images/currency.png)

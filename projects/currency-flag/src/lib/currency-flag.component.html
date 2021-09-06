@@ -1,8 +1,9 @@
-<div class="select-currency-box" (clickOutside)="openCurrencyBox = false">
-    <div class="select-box" (click)="openCurrencyBox = !openCurrencyBox">
-        <div class="currency-code">{{selectedCurrency.currencyCode}}</div>
+<div class="select-currency-box" (clickOutside)="openCurrencyBox = false; searchText = ''">
+    <div class="select-box" (click)="openCurrencyBox = !openCurrencyBox; searchText = ''">
+        <div class="currency-code" *ngIf="showCurrencyAndFlag">{{selectedCurrency.currencyCode}}</div>
+        <div class="currency-code" *ngIf="showFlagAndCountry">{{selectedCurrency.countryName}}</div>
         <div class="currency-symbol country-select">
-            <div class="symbol" *ngIf="selectedCurrency.CurrencySymbol">{{selectedCurrency.CurrencySymbol}}
+            <div class="symbol" *ngIf="selectedCurrency.CurrencySymbol && showCurrencyAndFlag">{{selectedCurrency.CurrencySymbol}}
             </div>
             <img class="img"
                 [src]="'https://www.countryflags.io/'+selectedCurrency.countryCode.toLowerCase()+'/flat/64.png'">
@@ -12,14 +13,17 @@
         <div class="search-box">
             <input type="text" class="input-box" placeholder="Search word" [(ngModel)]="searchText">
         </div>
-        <div *ngFor="let list of currencyArray | filter : searchText" class="item"
+        <div *ngFor="let list of currencyArray | filter : searchText : searchItem" class="item"
             (click)="selectedConCurrency(list)">
-            <div class="currency-name">
+            <div class="currency-name" *ngIf="showCurrencyAndFlag">
                 <div>{{list.currencyCode}}</div>
                 <div>{{list.Currency}}</div>
             </div>
+            <div class="currency-name" *ngIf="showFlagAndCountry">
+                <div>{{list.countryName}}</div>
+            </div>
             <div class="currency-symbol">
-                <span class="symbol">{{list.CurrencySymbol}}</span>
+                <span class="symbol" *ngIf="showCurrencyAndFlag">{{list.CurrencySymbol}}</span>
                 <img class="img"
                     [src]="'https://www.countryflags.io/'+list.countryCode.toLowerCase()+'/flat/64.png'">
             </div>
