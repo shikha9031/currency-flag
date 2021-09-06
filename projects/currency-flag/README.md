@@ -11,7 +11,7 @@ npm i currency-flag
 
 ## Usage
 
-> Note: Add CurrencyFlagModule to your list of module imports:
+> App.module.ts file
 
 ```
 
@@ -25,7 +25,7 @@ npm i currency-flag
 
 ```
 
-## You can then use this library in your application:
+> HTML file
 
 ```
 <lib-currency-flag 
@@ -36,7 +36,7 @@ npm i currency-flag
 
 ```
 
-> Note: You need to provide initial value
+> TS file
 
 ```
 selectedCurrency =
@@ -52,7 +52,7 @@ selectedCurrency =
 };
 ```
 
-> selectedVal($event) is a function which you can use it in ts file.
+> Note: selectedVal($event) is a function which you can use it in ts file.
 
 | Input                 | Values        | 
 | -------------         |:-------------:| 
